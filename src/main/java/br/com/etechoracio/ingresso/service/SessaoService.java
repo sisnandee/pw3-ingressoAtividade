@@ -1,6 +1,5 @@
 package br.com.etechoracio.ingresso.service;
 
-import br.com.etechoracio.ingresso.dto.FilmeResponseDTO;
 import br.com.etechoracio.ingresso.dto.SessaoResponseDTO;
 import br.com.etechoracio.ingresso.mapper.SessaoMapper;
 import br.com.etechoracio.ingresso.repository.SessaoRepository;
@@ -18,6 +17,7 @@ public class SessaoService {
     @Autowired
     private SessaoMapper sessaoMapper;
     public List<SessaoResponseDTO> findAll() {
-        var sessoes = SessaoRepository.findAll();
-        return SessaoMapper.toResponseDTOList(sessoes);
+        var sessoes = sessaoRepository.findAll();
+        return sessaoMapper.toResponseDTOList(sessoes);
+}
 }
