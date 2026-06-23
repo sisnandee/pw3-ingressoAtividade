@@ -1,14 +1,16 @@
 package br.com.etechoracio.ingresso.dto;
 
+
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 public record SessaoResponseDTO
-        (Long id,
-         LocalDate data,
-         LocalTime horario,
-         Long filme,
-         double preco,
-         String sala
+        (Long Id,
+         LocalDate Data,
+         LocalTime Horario,
+         double Preco,
+         String Sala,
+         Long Id_Filme
         )
 { }

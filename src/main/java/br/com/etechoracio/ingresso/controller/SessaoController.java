@@ -20,4 +20,9 @@ public class SessaoController {
 
     @GetMapping
     public List<SessaoResponseDTO> findAll(){return sessaoService.findAll();}
+
+    @GetMapping("/By-Filme")
+    public List<SessaoResponseDTO> findByFilme(){ return sessaoService.findByFilme();
+    }
+
 }
